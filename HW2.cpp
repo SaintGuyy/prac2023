@@ -4,30 +4,19 @@
 #include <algorithm>
 int main()
 {
-	float a;
-	float b;
-	float c;
-	float D = 0;
-	float x1 = 0;
-	float x2 = 0;
-	std::cin >> a;
-	std::cin >> b;
-	std::cin >> c;
-	if (a == 0.0) {
-		std::cout << "ERROR" << std::endl;
+	float R;
+	float r;
+	float x;
+	float y;
+	std::cin >> R;
+	std::cin >> r;
+	std::cin >> x;
+	std::cin >> y;
+	if ((x * x + y * y > r * r) and (x * x + y * y < R * R)) {
+		std::cout << "TRUE" << std::endl;
 	}
 	else {
-		if ((b * b - 4 * a * c) < 0) {
-			std::cout << "ERROR" << std::endl;
-		}
-		else {
-			D = b * b - 4 * a * c;
-			x1 = (-b + sqrt(D)) / 2 * a;
-			x2 = (-b - sqrt(D)) / 2 * a;
-			std::cout << x1 << std::endl;
-			std::cout << x2 << std::endl;
-		}
+		std::cout << "FALSE" << std::endl;
 	}
-
 	return 0;
 }
